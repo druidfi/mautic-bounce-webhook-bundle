@@ -1,0 +1,32 @@
+{
+    "name": "druid/mautic-bounce-webhook-bundle",
+    "description": "Handles mailer transport webhook callbacks for bounce and spam events in Mautic.",
+    "type": "mautic-plugin",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Druid"
+        }
+    ],
+    "keywords": [
+        "mautic",
+        "plugin",
+        "bounce",
+        "webhook",
+        "mailjet",
+        "email"
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "ext-json": "*",
+        "mautic/core-lib": "^5.0|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MauticPlugin\\MauticBounceWebhookBundle\\": ""
+        }
+    },
+    "extra": {
+        "install-directory-name": "MauticBounceWebhookBundle"
+    }
+}
