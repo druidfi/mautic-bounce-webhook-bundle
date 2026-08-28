@@ -1,5 +1,5 @@
 {
-    "name": "mautic-bounce-webhook-bundle/mautic-bounce-webhook-bundle",
+    "name": "druidfi/mautic-bounce-webhook-bundle",
     "description": "Handles mailer transport webhook callbacks for bounce and spam events in Mautic.",
     "type": "mautic-plugin",
     "license": "GPL-3.0-only",
