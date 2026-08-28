@@ -9,14 +9,14 @@ A Mautic plugin that handles mailer transport webhook callbacks for bounce and s
 ## Requirements
 
 - PHP 8.1 or higher
-- Mautic 5.x or 6.x
+- Mautic 5.x, 6.x or 7.x
 
 ## Installation
 
 Run the following command in your Mautic root directory:
 
 ```bash
-composer require druid/mautic-bounce-webhook-bundle
+composer require druidfi/mautic-bounce-webhook-bundle
 ```
 
 Then clear the cache and go to the **Plugins** page in Mautic to install or upgrade the plugin.
