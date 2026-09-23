@@ -2,7 +2,6 @@
 
 namespace MauticPlugin\MauticBounceWebhookBundle\Provider;
 
-use Mautic\EmailBundle\Model\TransportCallback;
 use Mautic\LeadBundle\Entity\DoNotContact;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,7 +23,7 @@ class MailjetBounceProvider implements BounceProviderInterface
     private const MAILJET_EVENT_TYPES = ['sent', 'open', 'click', 'bounce', 'blocked', 'spam', 'unsub'];
 
     public function __construct(
-        private readonly TransportCallback $transportCallback,
+        private readonly TransportCallbackInterface $transportCallback,
         private readonly LoggerInterface $logger,
     ) {
     }
@@ -35,8 +34,7 @@ class MailjetBounceProvider implements BounceProviderInterface
 
         return $payload !== null
             && isset($payload[0]['event'])
-            && in_array($payload[0]['event'], self::MAILJET_EVENT_TYPES, true)
-            && array_key_exists('hard_bounce', $payload[0]); // Mailjet-specific field
+            && in_array($payload[0]['event'], self::MAILJET_EVENT_TYPES, true);
     }
 
     public function process(Request $request): void
