@@ -21,9 +21,18 @@
         "ext-json": "*",
         "mautic/core-lib": "^5.0|^6.0|^7.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "symfony/http-foundation": "^6.0|^7.0"
+    },
     "autoload": {
         "psr-4": {
             "MauticPlugin\\MauticBounceWebhookBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MauticPlugin\\MauticBounceWebhookBundle\\Tests\\": "Tests/"
         }
     },
     "extra": {
